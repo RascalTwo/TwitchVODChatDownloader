@@ -2,7 +2,7 @@ import os
 import sys
 import json
 
-from .shared import parse_twitch_timestamp
+from shared import parse_twitch_timestamp
 
 
 if __name__ == '__main__':

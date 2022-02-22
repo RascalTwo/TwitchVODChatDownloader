@@ -7,7 +7,7 @@ import requests
 
 from typing import Any, List, Optional
 
-from .shared import follow_cursors, parse_twitch_timestamp
+from shared import follow_cursors, parse_twitch_timestamp
 
 
 

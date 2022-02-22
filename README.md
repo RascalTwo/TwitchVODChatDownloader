@@ -6,7 +6,9 @@ It *only* has been tested on Twitch VODs, use on a actually live stream at your 
 
 ## Installation
 
-Install the `requests` dependancy
+Install the `requests` dependency
+
+> If you wish to have terminal highlighting when using `search.py`, also install `colorama`
 
 ## Downloading
 
@@ -31,9 +33,11 @@ python3 search.py [VOD ID] [Query]
 
 It will output the offset time, author, and message of all messages that contain the `Query`
 
-### Messags
+> If `colorama` is installed, the query within outputted messages will be highlighted
 
-The message objects are formated as such:
+### Messages
+
+The message objects are formatted as such:
 
 ```json
 {

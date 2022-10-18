@@ -4,6 +4,22 @@ Yet another Twitch Chat downloader, it does exactly what it says in the title: i
 
 It *only* has been tested on Twitch VODs, use on a actually live stream at your own risk.
 
+## How It's Made
+
+**Tech Used:** Python, `requests`, `colorama`
+
+Thanks to an internal Twitch V5 API, the entirety of chat for a recorded VOD is available in cursor-paginated chunks JSON format. This script iterates through the cursors, merging all these chunks into a single JSON for further processing.
+
+One built-in processing is the searching of messages for text, highlighting via `colorama` if found.
+
+## Optimizations
+
+While the base optimizations have already been made - caching of requests, as I have no use of this for live streams, it can still be further optimized to wait for new messages for live streams accordingly.
+
+## Lessons Learned
+
+While the Twitch Chat API isn't a secret, reverse engineering it was a fun challenge, along with consuming a cursor-paginated API - and highlighting text in the terminal with `colorama` was something new.
+
 ## Installation
 
 Install the `requests` dependency
